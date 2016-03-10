@@ -15,23 +15,20 @@ import com.example.web.login.LoginService;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfigOAuth2 extends WebSecurityConfigurerAdapter {
-    @Autowired
-    private LoginService loginService;
+	@Autowired
+	private LoginService loginService;
 
-    @Override
+	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http
-        	.csrf()
-				.requireCsrfProtectionMatcher(new AntPathRequestMatcher("/oauth/authorize"))
-				.disable();
+		http.csrf().requireCsrfProtectionMatcher(new AntPathRequestMatcher("/oauth/authorize")).disable();
 	}
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(loginService);
-    }
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		auth.userDetailsService(loginService);
+	}
 
-    @Override
+	@Override
 	@Bean
 	public AuthenticationManager authenticationManagerBean() throws Exception {
 		return super.authenticationManagerBean();
