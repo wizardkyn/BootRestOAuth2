@@ -29,7 +29,7 @@ response :<br>
 . In Memory 
 
 # Tokens
-. JDBC
+. JDBC (Mysql)
 
 # Enforcing SSL
 
