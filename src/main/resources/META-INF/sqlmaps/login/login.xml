@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.web.sqlmappers.login.LoginMapper">
+<select id="getUser" parameterType="java.lang.String" resultType="com.example.web.domain.UserVo">
+<![CDATA[
+SELECT user_id AS userId, user_pass AS passWd
+FROM users
+where user_id = #{userId} LIMIT 1
+]]>
+</select>
+
+<select id="getUserList" resultType="com.example.web.domain.UserVo">
+<![CDATA[
+SELECT user_id AS userId, user_pass AS passWd
+FROM users
+]]>
+</select>
+</mapper>
