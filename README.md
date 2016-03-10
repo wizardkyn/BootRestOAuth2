@@ -1,6 +1,7 @@
 # BootRestOAuth2
 Rest with Spring Security OAuth2 Authentication using Mysql<br>
-TokenStore with InMemoryTokenStore
+TokenStore with In Memory<br>
+The Branch "useJdbc" : TokenStore with JDBC
 
 # Environment
 Spring Boot 1.4.0 , Spring Security 4.0.3 , spring-security-oauth2 2.0.9<br>
