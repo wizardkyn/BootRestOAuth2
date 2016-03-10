@@ -7,6 +7,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
@@ -14,7 +15,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
 
 import com.example.web.login.LoginService;
 
-//@Configuration
+@Configuration
 public class OAuth2ServerConfigJdbc {
 	private static final String RESOURCE_ID = "REST_SERVICE";
 
@@ -39,8 +40,8 @@ public class OAuth2ServerConfigJdbc {
 		}
 	}
 	
-//	@Configuration
-//	@EnableAuthorizationServer
+	@Configuration
+	@EnableAuthorizationServer
 	protected static class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
 		@Autowired
 		@Qualifier("loginService")
