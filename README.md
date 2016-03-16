@@ -10,19 +10,23 @@ mysql , mybatis 3.3.1 , mybatis-spring 1.2.4<br>
 using @RestController No jerysy<br>
 Logback<br>
 External Tomcat 8 with https<br>
-access token :<br>
+access token
+```
 curl -k -u rest-client:rest-secret https://localhost:8443/BootRestOAuth2/oauth/token -d "grant_type=password&username=restUser&password=1234"
-
-response :<br>
+```
+response
+```
 {"access_token":"122a9f84-880d-423a-ad00-283433ef71e2","token_type":"bearer","expires_in":43199,"scope":"read write trust"}
-
+```
  
-site access :<br>
+site access
+```
 curl -k -H "authorization: bearer 122a9f84-880d-423a-ad00-283433ef71e2" https://localhost:8443/BootRestOAuth2/api/users
-
-response :<br>
+```
+response
+```
 [{"userId":"restUser"},{"userId":"restUser2"},{"userId":"restUser3"}]
-
+```
 # Client Details
 . authorized Grant Types : "password" only.(UserDetailsService using Mysql with Mybatis)<br>
 . not use rest of them ("authorization_code","refresh_token", "implicit","client_credentials").<br>
