@@ -4,16 +4,16 @@
 <mapper namespace="com.example.web.sqlmappers.login.LoginMapper">
 <select id="getUser" parameterType="java.lang.String" resultType="com.example.web.domain.UserVo">
 <![CDATA[
-SELECT user_id AS userId, user_pass AS passWd
-FROM users
-where user_id = #{userId} LIMIT 1
+SELECT USR_ID AS userId, PASS_WD AS passWd
+FROM tb_usr_info
+where USR_ID = #{userId} LIMIT 1
 ]]>
 </select>
 
 <select id="getUserList" resultType="com.example.web.domain.UserVo">
 <![CDATA[
-SELECT user_id AS userId, user_pass AS passWd
-FROM users
+SELECT USR_ID AS userId, PASS_WD AS passWd
+FROM tb_usr_info
 ]]>
 </select>
 </mapper>
