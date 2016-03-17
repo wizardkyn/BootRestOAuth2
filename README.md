@@ -9,6 +9,7 @@ mysql , mybatis 3.3.1 , mybatis-spring 1.2.4<br>
 using @RestController No jerysy<br>
 Logback<br>
 External Tomcat 8 with https<br>
+
 access token
 ```
 curl -k  -u rest-client:rest-secret https://localhost:8443/BootRestOAuth2/oauth/token -d "grant_type=password&username=restUser&password=1234"
