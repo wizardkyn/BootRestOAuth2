@@ -16,11 +16,13 @@ curl -k  -u rest-client:rest-secret https://localhost:8443/BootRestOAuth2/oauth/
 ```
 response 
 ```
-{"access_token":"122a9f84-880d-423a-ad00-283433ef71e2","token_type":"bearer","expires_in":43199,"scope":"read write trust"}
+{
+    "access_token":"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOlsiUkVTVF9TRVJWSUNFIl0sInVzZXJfbmFtZSI6InNpY29tcyIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSIsInRydXN0Il0sImV4cCI6MTQ1ODIxOTgxNiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJqdGkiOiJiYTYyZTg0OC1iYmM3LTRmZTUtOTAyNy02OGI0OWY2ZDFmNzgiLCJjbGllbnRfaWQiOiJyZXN0LWNsaWVudCJ9.2kClJ4MGs3MWribYO7SW9OWxsbq6cy6M-qltrkRb2sw","token_type":"bearer","expires_in":43199,"scope":"read write trust","jti":"ba62e848-bbc7-4fe5-9027-68b49f6d1f78"
+} 
 ```
 site access
 ```
-curl -k -H "authorization: bearer 122a9f84-880d-423a-ad00-283433ef71e2" https://localhost:8443/BootRestOAuth2/api/users
+curl -k -H "authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOlsiUkVTVF9TRVJWSUNFIl0sInVzZXJfbmFtZSI6InNpY29tcyIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSIsInRydXN0Il0sImV4cCI6MTQ1ODIxOTgxNiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJqdGkiOiJiYTYyZTg0OC1iYmM3LTRmZTUtOTAyNy02OGI0OWY2ZDFmNzgiLCJjbGllbnRfaWQiOiJyZXN0LWNsaWVudCJ9.2kClJ4MGs3MWribYO7SW9OWxsbq6cy6M-qltrkRb2sw" https://localhost:8443/BootRestOAuth2/api/users
 ```
 response
 ```
