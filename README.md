@@ -1,7 +1,7 @@
 # BootRestOAuth2
 Rest with Spring Security OAuth2 Authentication using Mysql<br>
 TokenStore with In Memory<br>
-The Branch "useJdbc" : TokenStore with JDBC
+The Branch "useJdbc" : TokenStore with JDBC<br>
 The Branch "useJwt" : TokenStore with JSON Web Tokens(JWT)
 
 # Environment
